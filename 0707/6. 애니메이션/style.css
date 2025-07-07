@@ -1,0 +1,67 @@
+.ani {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;  /*포지션이 static이면 안먹혀서 relative로 바꿔줘야함 */
+
+  /*animation-name: ani;
+  animation-duration: 3s;   /*지속 시간*/
+  /* animation-timing-function: linear;    /*속도 지정*/ /*linear 일정 속도, ease 조금씩 빨라짐 */
+  
+  /* animation-timing-function: linear;  */
+  /* animation-timing-function: ease; 
+  /* animation-timing-function: ease-in; */
+  /* animation-timing-function: ease-out; */ 
+  /*animation-timing-function: ease-in-out; 
+  /*애니메이션 반복 횟수, 숫자만큼 반복, infinite 무한 반복*/
+  /* animation-iteration-count: infinite;
+
+  /* 역재생인데 재생 방향* alternate */
+  animation-direction: reverse; 
+  
+  animation: ani 3s linear infinite;
+
+  animation-fill-mode: both;
+
+  /**/
+
+}
+
+div:hover {
+  animation-play-state: paused; /*마우스 커서 올리면 멈춤 */
+}
+
+
+/* 어떤 걸로 시작해서 어떻게 끝낼지 설정*/
+/* %로도 가능  원래는 from  {} to {]*/
+@keyframes ani {
+  10% {
+    left: 0;
+    background-color: yellow;
+  }
+  25% {
+    top: 0;         /*자연스럽게 하기 위해서 나머지 애들도 top을 설정해 줘야함 */
+    left: 200px;
+    background-color: blue;
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+    background-color: green;
+  }
+
+  75% {
+    top:200px;
+    left: 0px;
+    background: pink
+
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    background-color: salmon;
+  }
+
+}
+

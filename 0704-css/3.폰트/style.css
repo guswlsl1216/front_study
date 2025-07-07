@@ -1,0 +1,74 @@
+p {
+ /* 글꼴 크기 */
+ 
+  font-size: 32px;
+  
+  /* 글꼴 두께 */  
+  /* 100 : lighter
+     400 : normal
+     700 : bold
+     900 : bolder
+  */
+  font-weight: lighter;
+
+}
+
+body {
+  
+/* 줄간격 */
+/* 16px = 1em = 100% 
+ 고정 : px , 부모와 상대적 크기 : em, %*/
+
+  line-height: 32px;
+
+/* 글꼴 */
+/* 띄어쓰기 있는 애들은 꼭 끝에 ; 붙여줘야함 */
+/* 글꼴 순서대로, 웹으로 들어갈 때 안읽히면 계속 넘어감.
+  마지막은 어디서나 쓸 수 있는 폰트로 지정하는게 좋음. 
+*/
+  font-family: 'Times New Roman', Times, serif;
+
+  font-style: italic;
+
+  /* 소문자를 대문자로 바꿈 */
+  font-variant: small-caps;
+
+ /* font:  [font-style font-variant font-weight
+        font-size/line=height font-family;] */
+    }
+
+  p {
+    font : italic bold 80px '굴림', Gulim;
+    font : bold italic small-caps
+            12px/1.2 '돋움','굴림', Gulim;
+
+  }
+
+  h5 {
+    /* 글꼴 */
+    color: red;
+    color: #ff0000;
+    color: rgb(250, 0, 0);
+
+    text-decoration: underline;
+
+    /* 대소문자 설정 */
+    text-transform: uppercase;
+
+    /* 그림자 */
+    /* 가로, 세로, 그림자 퍼짐, 그림자 색 */
+    /* 그림자는 한번 설정한 후에 다음에 설정하면 효과가 중첩됨*/
+    /* 만약 중첩해서 쓰고 싶은데 귀찮으면 그냥 , 찍고 이어줘도 됨.*/
+    text-shadow: 5px 10px 1px gray, 2px 4px 3px green;
+    
+
+    /* 글 자간 */
+    letter-spacing: 5px;
+
+    /* 단어 간격 */
+    word-spacing: 30px;
+
+    /* 글 정렬 */
+    text-align: right;
+
+  }

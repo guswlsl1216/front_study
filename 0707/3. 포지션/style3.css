@@ -1,0 +1,78 @@
+* {
+  margin: 0;  /*얘를 설정해 줘야 홈과 메뉴가 같은 선상*/
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 3000px;
+}
+
+
+header {
+  background-color: rgb(167, 165, 165);
+  padding: 10px;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+}
+
+
+ul {
+  list-style: none;
+}
+
+nav > ul > li {
+
+  display: inline-block;    /*가로로 일자 정렬*/
+  margin-right: 20px;       /* 여백 살짝 만들어줌 */
+} 
+
+/* > 로 하면 적용 안됨. 스페이스바로 해줘야함*/
+header a {
+  text-decoration: none;
+  color: black;
+
+}
+/* inline block 하면 두 가지가 붙어버림, float로 따로 따로 설정해줌 */
+.logo {
+  float: left;  /*float를 사용하면 강제적으로 바꾸기 때문에 높이 설정이 안됨. header한테 기능을 줄거임*/
+}
+
+nav {
+  float: right;
+}
+
+:content {
+  clear: both;  /*float 때문에 clear 적용해줘야 함. */
+}
+
+content > h1, content > p {
+  padding: 20px;
+}
+
+.btn-top {
+  border: 1px solid lightgrey;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center; /*아이콘 글자 취급 , 텍스트 어라인으로 조절 가능 */
+
+  position: fixed;    /*스크롤 움직여도 따라오게 설정*/
+  bottom: 10px;
+  right: 10px;
+}
+
+.btn-top  i {
+  width: 40px;   /*필요 없을 순 있는데 혹시 몰라서 설정해 놓음 , 줄간격으로 설정한거라*/
+  height: 40px;
+  line-height: 50px;   /*줄 간격*/
+  color: gray;
+}
+
+.btn-top:hover {         /*이게 가상 선택자*/
+
+background-color: rgb(253, 206, 206);
+
+}
+/* hover 마우스를 올렸을 때 들어갈 코드*/ /* 만약 색깔이 안바뀌면 i한테도 따로 해줘야함 )

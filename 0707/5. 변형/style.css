@@ -1,0 +1,27 @@
+body {
+  padding: 150px;
+
+}
+
+div {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+
+  /* 해당 요소를 이동 translate x축, y축*/
+ /* transform: translate(100px, 100px); */
+
+ /*Y축만 이동하고 싶을 때 : 현재 위치를 기준으로 움직임*/
+ /* transform: translateY(10px); */
+
+ /* 요소의 크기를 변경 (얘는 %가 안들어감, 배수 값이 들어감*/
+/* transform: scale(2, 3); */
+
+/* 요소의 각도 변경 deg : 45도 돌려줘! */
+/* transform: rotate(45deg); */
+/* 회전 시 중심점 변경 */
+/* transform-origin: left top; /*꼭 두개 조합해야 하는건 아님. */
+
+/* 요소의 기울기 설정 (애니메이션으로 활용 가능) */
+  transform: skew(15deg, 30deg);
+}

@@ -1,0 +1,51 @@
+.rel {
+
+  /*satic을 기준으로 상대적 배치 */
+  position: relative;
+  right: 100px;
+  bottom: 50px;
+
+}
+
+div {
+  border: 1px solid red;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 200px;
+}
+
+.abs {
+  width: 100px;
+  height: 100px;
+
+  /* static 기준이 아니라 부모 요소가 기준이 됨*/
+  /* 단 부모가 static이 아니여야 함 */
+  /* 만약 부모가 static이면 그 상위 요소로 넘어가게 됨 */
+  position: absolute;
+
+  /* 부모 요소의 정중앙 */
+  /* bottom: 50%;
+  right: 50%; 
+
+  transform: translate(-50%, -50%); */
+  /*정중앙으로 보낼 수 있음 */
+
+  /* 아래 쪽 가운데 */
+/*  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); */
+
+  top: 0;
+  right: 100%;
+
+
+  
+
+  
+
+}
+
+img {
+  width: 100px;
+}

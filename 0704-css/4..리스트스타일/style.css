@@ -1,0 +1,31 @@
+ol {
+/* 순번 */
+  list-style-type: upper-alpha;
+  
+}
+
+ul > li {
+/*list-style-image: url("../../images/images/pepe.jpg") */ 
+/* 얘는 크기 못바꿈, 애초에 이미지를 적당한 걸 찾거나 넣는 방법을 다른 방법으로 해야 함 */
+ /*
+  list-style-type: none;
+  background-image: url("../../images/images/pepe.jpg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position:left center;
+  margin: 0;
+  padding: 30px 30px 30px;
+  */
+
+  /*margin은 바깥 여백 , padding 여백 조절*/
+}
+
+ul {
+  list-style-position: outside; /* 리스트 들어가는 위치 조절 */
+  list-style: square inside;
+}
+
+
+
+
+

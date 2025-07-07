@@ -1,0 +1,80 @@
+
+/*p 태그 중 첫 번째 */
+div > p:first-child {
+  color: red;
+}
+
+/*마지막 p 태그 */  /*: 앞뒤로 스페이스 조심*/
+div > p:last-child {
+  color: blue;
+}
+
+/*위에 꺼는 처음, 마지막만 설정 가능*/
+
+/*div > h3:nth-of-type(odd) 다른 태그가 중간에 있어도 제외된 순번으로 처리*/
+div > h3:nth-of-type(4) {
+
+  color: red;
+}
+/* h3:nth-child(even)   
+괄호 안에 숫자만 바꿔줌 */
+/* 홀짝으로도 가능, */ 
+/* 대신 중간에 다른 태그가 있어도 포함되어 계산이 되기 때문에 다른 태그가 없는지 잘 봐야함 */
+
+div > h3:nth-child(4)   {
+
+  color: blue;
+}
+
+/*자식인지 자손인지 중요하지 않음, > 꺽새 *
+원래는 네번째가 inner로 자손인데, > 없어도 상관 없음 */
+
+#outer > h4:nth-child(5) {
+  color: red;
+
+}
+
+/*a:link 기본 상태 - 페이지를 방문하지 않았을 때 적용되는 css*/
+a:link {
+  color: aqua;
+}
+
+/* 해당 페이지를 방문 했을 때 */
+a:visited {
+  color: red;
+}
+
+/*마우스 커서를 올려두면*/
+a:hover {
+  color: blueviolet;
+
+}
+/* 마우스로 클릭했을 때*/
+a:active {
+
+    color:burlywood
+
+}
+
+/* 포커스를 가졌을 때 (커서)*/
+input:focus {
+  color: rgb(161, 187, 235);
+}
+
+
+input:focus {
+  background: rgb(157, 213, 235);
+
+}
+
+input::placeholder {
+  color: tomato;
+}
+
+/*드래그 할때 적용되는 거*/
+
+p::selection {
+  color:bisque;
+  background: gray;
+
+}

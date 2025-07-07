@@ -1,0 +1,44 @@
+
+.float {
+  float : left;
+
+}
+
+
+.clear {
+  clear: both;
+
+}
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+
+}
+
+.box2 {
+  background-color: blueviolet;
+
+}
+
+.box3 {
+  background-color: pink;
+  float: right;
+}
+
+.box4 {
+  background-color: rgb(235, 56, 92);
+  margin: auto;       /*센터 정렬, float : center X */   /*인라인 요소는 margin : auto로 안됨* * 특정 영역을 가운데로 보내고 싶을 때 */
+}
+
+
+.container {
+  height: 200px;
+  border: 2px solid red;        /* 두개 묶어서 영역을 보기 위해 설정*/
+  overflow: scroll;               /*부모 영역보다 자식 영역이 커서 삐져나올 경우 오버플로우 사용 */
+                                  /* hidden으로 숨길 수도 있음, 숨겨진 영역은 scroll로 볼 수 있게 가능 */
+
+
+}

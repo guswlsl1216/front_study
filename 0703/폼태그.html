@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="https://www.google.com/search" method="get">
+    <input type="text" name="q">   
+    <input type="submit" value="검색">
+  </form>
+
+  <form>
+    <input type="text" size="5" maxlength="6" minlength="2" autofocus> 
+    <input type="text" placeholder="아이디를 입력해 주세요."> <br>
+    <input type="text" value="홍길동" readonly><br> 
+    <input type="text" value="홍길동" disabled><br>
+    <input type="submit" value="전송"><br>
+  </form>
+
+  <form>
+    ID : <input type="text"><br>
+    비밀번호 : <input type="password"><br>
+    라디오버튼 : <input type="radio" name="yes-or-no" value="yes" checked> 예 
+                <input type="radio" name="yes-or-no"value="no" > 아니오 
+    체크박스 : <input type="checkbox" name="chk" value="java"> Java
+              <input type="checkbox" name="chk" value="html" checked> HTML
+              <input type="checkbox" name="chk" value="css"> CSS
+    <input id="agree"type="checkbox">
+    <label for="agree">약관 동의</label>
+
+    <br><br>
+    <input type="submit" value="전송">
+    <input type="reset" value="리셋">
+    <input type="button" value="버튼" onclick="alert('버튼 눌러')">
+    <button>버튼2</button>
+
+    <input type="file">
+
+    <textarea rows="10" cols="40"></textarea>
+
+    <select name="color"> 
+      <option value="red">빨강</option>
+      <option value="blue" selected>파랑</option>
+      <option value="yellow">노랑</option>
+      <option value="green">초록</option>
+    </select>
+
+    <input type="hidden">
+    <input type="date">
+
+  </form>
+
+
+</body>
+</html>

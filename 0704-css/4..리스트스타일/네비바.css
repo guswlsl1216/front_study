@@ -1,0 +1,24 @@
+.nav > li {
+  list-style-type: none;
+  float: left; /*왼쪽 정렬로 바꿔줄 수 있음 . 리스트를 */
+  width: 20%;
+  text-align: center;
+  
+}
+
+.nav{
+  background-color:rgb(166, 211, 229);
+  height: 30px;
+
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+i{
+  font-size: 50px;
+  color: rgb(208, 176, 240);
+
+}
