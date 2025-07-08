@@ -16,12 +16,15 @@ ul {
  
 }
 
-
+/*flex 자식한테 걸어주는거임 img가 아니라 img를 가지고 있는 div한테 */
+div {
+  display: flex;
+  align-items: center;
+}
 
 img {
   width: 100px;
-  display: flex;
-  align-items: center;
+
 }
 
 header {
@@ -74,7 +77,20 @@ ul {
 
 /*margin left right , a,b 구역 설정 후 space-between*/
 
+input[type="text"] {
+width: 250px;
+height: 40px;
+font-size: 15px;
+border-radius: 5px;
+background: rgba(216, 214, 214, 0.781);
+}
 
+input[type="submit"] {
+width: 150px;
+height: 40px;
+font-size: 15px;
+font-weight: bolder;
+border-radius: 3px;
 
-
+}
 
