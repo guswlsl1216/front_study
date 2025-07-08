@@ -1,0 +1,18 @@
+/* 동위 선택자 (형제 선택자) */
+/* 기준 요소 뒤 형제들을 선택함 */
+h1 ~ p {
+  background: pink;
+}
+/* h1 태그의 형제 관계 p 태그에 적용 */
+
+/* 기준 요소 뒤부터 가장 가까운 형제 하나 */
+h1 + p {
+  color: red;
+}
+
+/* > 이것도 포함*/
+
+input[type="checkbox"]:checked + label {
+  background: blue;
+} 
+/**/

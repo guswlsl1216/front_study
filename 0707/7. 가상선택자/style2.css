@@ -1,9 +1,47 @@
-* (
-)
+.login-form input:focus {
 
-div {
-width: 200px;
-height: 200px;
-color: red;
+  background: gray;
+}
+
+.pagenation a:hover {
+
+  background: skyblue
+}
+
+
+.container div{
+  display: inline-block; /*옆으로 배치 ! float도 가능*/
+  margin: 30px;   /*조금 떨어져 있도록*/
+  width: 150px;
+  height: 150px;
+  transition: all 0.5s ease;   /* 애니를 줄거임. 모든 속성 다 적용해주세여 / 지속 시간 */
 
 }
+
+.container div:nth-child(1) {
+  background: pink;
+
+}
+
+.container div:nth-child(2) {
+  background: darkkhaki;
+
+}
+
+
+.container div:nth-child(3) {
+  background: skyblue;
+
+}
+
+
+.container div:nth-child(4) {
+  background: magenta;
+
+}
+/* 커서를 가져다 대면 커지게 한느 효과 그림자도 추가 설정해줌 */
+.container div:hover {
+  box-shadow: 2px 2px;
+  transform: scale(1.2);    /*너비 높이 변경일 경우 아래쪽으로 커지는데 중심축부터 커지는거라서 transform의 스케일로 설정*/
+}
+

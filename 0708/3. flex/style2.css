@@ -1,0 +1,122 @@
+.parent {
+  border: 1px solid red;
+  display: flex; /*flex 하고 나면 가로 정렬됨 */
+  /*얘를 적용하면 자식의 크기가 고정되어 있음, 따라서 자식한테 걸어주는 속성을 걸어줌 flew-grow*/
+}
+
+.parent > div {
+  height: 100px;
+  width: 100px;
+  background: skyblue;
+  margin: 5px;
+
+}
+
+/*각각 자식한테 설정, 부모는 하나만 걸면 됐지만 자식은 여러개가 있을 수 있어서 각 자식들한테 걸어줘야할 가능성이 높음*/
+.child {
+  /* 증가 비율*/
+ flex-grow: 1;  
+ /* 감소 비율 */
+ flex-shrink: 3;
+}
+
+.child2 {
+  flex-grow: 2;  
+  flex-shrink: 2;
+}
+
+.child3 {
+  flex-grow: 3; 
+ flex-shrink: 1;
+} 
+
+.parent2 {
+  border: 1px solid red;
+  height: 500px;
+
+  display: flex;
+}
+
+.parent2 > div {
+  height: 100px;
+  width: 100px;
+  background: pink;
+  margin: 5px;
+}
+
+.child4 {
+ /*  flex: 1; */
+ /* order: 1; */
+  align-self: center; 
+/* align-self 개별 설정 가능*/
+}
+
+.child5 {
+flex: 1;
+/* order: 2; */
+
+}
+
+.child6 {
+flex: 1;
+/* order: 0; */
+
+/* 부모한테 flex 걸고 자식들한테 flex 값을 설정해 주면 그 비율대로 적용됨, 자식들 중 하나 flex 입력 안하면 걔만 처음 설정한 비율로 됨 */
+/* order로 순서를 변경할 수 있음 (3,1,2)*/
+/* 가로 정렬 :  세로 정렬 : align*/
+}
+
+.parent3 {
+  border: 1px solid red;
+  display: flex;
+}
+
+.parent3 > div {
+  width: 100px;
+  height: 100px;
+  background: yellowgreen;
+}
+
+.child7 {
+/*  margin-right: auto; /*오른쪽만큼 마진 먹어서 밀어버림*/ 
+}
+
+.child8 {
+  margin-right: auto;
+}
+
+/*균등하게 적용하고 싶을 경우 부모한테 적용하고, 자식하나만 밀어버릴때는 자식한테 쓰는 게 나음*/
+
+.container {
+width: 500px;
+height: 500px;
+background: yellow;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.container > div {
+  width: 400px;
+  height: 400px;
+  background: pink;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container > div > h1 {
+
+width: 300px;
+height: 300px;
+background: yellowgreen;
+/*display: flex;
+justify-content: center;
+align-items: center;*/
+
+text-align: center;
+line-height: 300px;
+}
