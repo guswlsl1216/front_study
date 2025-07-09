@@ -1,0 +1,152 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+/*텍스트 데코레이션 여기서 해도 됨 */
+}
+/*전체 선택자의 의미가 아님. 이 안에 넣으면 모든 요소에 너비 1200pc 넣으라는 거임. 그래서 여기에 두면 안됨*/
+
+body {
+  width: 1200px;
+  margin: auto; 
+  /*너비값 고정이라서 왼쪽으로 쏠리는데 margin auto하면 가운데로 배치할 수 있음 */
+}
+
+.logo > img {
+  height: 30px;  /*하나만 설정해도 비례에 맞춰서 바뀌니까 둘다 설정할 필요는 없음*/
+  margin-right: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-nav > ul > li {
+  display: inline-block; 
+  font-size: 18px;
+  font-weight: bold;
+  /*인라인 X 인라인 블럭은 크기 설정 가능, 크기를 주던가 마진, 패딩을 활용해도 됨.*/
+  /*ul은 블럭이지만 li는 글자만큼만 영역 생성되어서 붙을 수 밖에 없음 */ 
+  padding-right: 30px; 
+}
+
+a {
+  color: black;
+}
+
+.carrot-color {
+  color: #ff8a3d;
+
+}
+
+.left-menu, .right-menu {
+  display: flex;
+  justify-content: center;  /*가운데 정렬*/
+  align-items: center;  /*세로 정렬*/
+}
+
+/*원래는 right menu인데 input 중 search가 하나라서 속성 선택자를 선택 가능*/
+input[type="search"] {
+  width: 250px;
+  height: 40px;
+  font-size: 15px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+/*input은 인라인 블럭이라서 크기 조절 가능. (인라인은 불가)조절하면 됨*/
+  padding: 5px; /* 너무 
+  왼쪽으로 붙어서 패딩으로 좀 띄워줌 */
+  
+}
+
+.btn {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-light {
+  border: 1px solid lightgray;
+  background: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-around; /*between은 너무 양쪽으로 딱 붙어버림, space-around로*/
+  background: white;
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  padding: 15px; /*높이 모르겠으면 overflow로 설정하고 적당히 padding 주면 크기 유지 가능*/
+  width:1200px; /*body 넓이와 맞추게끔 100%로 설정*/
+}
+
+.right-menu > div:nth-child(1) {
+  margin-right: 15px;
+}
+
+main {
+  margin-top: 70px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+#article-top h1, #article-bottom h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+article {
+  display: flex;
+  align-items: center; /*세로 정렬*/
+  justify-content: space-around;
+  width: 100%;
+}
+
+#article-top {
+  background: #fbf7f2;
+  padding-left: 30px;
+}
+
+#article-bottom {
+  background: white;
+
+}
+
+.btn-dark {
+  background: rgb(233, 233,233);
+
+  /*간격이 너무 좁아서 margin으로 간격을 넓혀줘야 함. 인라인은 크기 조절이 안되니까*/
+}
+
+#article-bottom p {
+  margin-bottom: 30px;
+}
+
+footer > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+/*첫번째 div한테 적용할거다!*/
+
+footer li {
+  padding: 15px;
+
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer > div:nth-child(2) {
+  margin: 20px;
+}
+/*푸터에 두번째 디브한테! */
+
+footer h5 {
+  padding: 15px 0; /*위 아래 패팅 줘서 */
+}

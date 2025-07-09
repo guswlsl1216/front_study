@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: 320px;
+  gap: 10px;
+  padding: 20px; /*너무 붙어있어서 */
+}
+
+.card {
+  background: white;
+  box-shadow: 1px 1px 5px gray;
+  padding: 10px;
+}
+
+.card-image {
+  height: 60%;
+  background-size: cover; /*반복 멈춤*/ /*상자 크기에 맞춤*/
+}
+
+.card > h3  {
+  text-align: center;
+  font-size: 1.5rem; /* 기본적으로 16px / 24px이 됨 */
+  padding: 5px 0; /*위 아래, 좌우 X */
+
+}
+
+.card > p {
+  font-size: 0.8rem;
+
+}
+
+
+.image1 {
+  background-image: url(./cups/cup-1.jpg);
+}
+
+.image2 {
+  background-image: url(./cups/cup-2.jpg);
+}
+
+.image3 {
+  background-image: url(./cups/cup-3.jpg);
+}
+
+.image4 {
+  background-image: url(./cups/cup-4.jpg);
+}
+
+.image5 {
+  background-image: url(./cups/cup-5.jpg);
+}
+
+.image6 {
+  background-image: url(./cups/cup-6.jpg);
+}
+
+.image7 {
+  background-image: url(./cups/cup-7.jpg);
+}
+
+@media (max-width: 476px) {
+ .container {
+  grid-template-columns: 300px;
+ }
+
+}

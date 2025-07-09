@@ -1,0 +1,112 @@
+/*
+  @media : 미디어 쿼리를 쓸거임
+  screen : 미디어 타입 - 화면 
+  and : 조건들을 연결해주는 논리연산자
+  max-width : 조건.. 아래 코드는 최대 너비가 500px일때 까지만 적용할거다
+
+*/
+
+/*
+div{
+  width: 200px;
+  height: 200px;
+  background: pink;
+}
+
+*/
+/*
+@media (max-width: 500px ){
+/* 해당 조건에 만족할 경우 적용할 css 코드 */ 
+/*
+  div {
+    background: skyblue;
+
+
+  }
+*/
+* {
+  box-sizing: border-box;
+
+}
+.container {
+  background: pink;
+  height: 2000px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  background: skyblue;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+}
+
+@media (max-width: 425px) {
+  .container {
+    flex-direction: column;  
+    /* 열방향으로  */
+    }
+    .container > div {
+      width: 90%;
+      height: 150px;
+
+    } 
+  }
+
+  @media (min-width : 426px) and (max-width: 768px) {
+    .container {
+      align-content: flex-start;
+    }
+
+    .container > div {
+      width: 45%;
+      height: 150px;
+    }
+
+  }
+
+  .header1 {
+    height: 100px;
+    background: yellowgreen;
+  }
+
+  .header2 {
+    height: 100px;
+    background: skyblue;
+  }
+
+@media (max-width: 768px) {
+  .header1 {
+    display: none;
+  }
+  .header2 {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .header1 {
+    display: block;
+  }
+
+  .header2 {
+    display: none;
+  }
+  }
+  /*어떤 때에는 header1이 보이고 어떤 때에는 header2가 보임, ex) 햄버거 */
+
+  .card {
+    font-size: 16px;
+    padding: 1em;
+  }
+
+  .card > h1 {
+    font-size: 1.5em;
+    /*폰트 사이즈 상속 받음, 부모 기준으로 움직임*/
+  }
+
+  .card > p {
+    margin: 0.5em;
+  }
