@@ -1,0 +1,33 @@
+.black-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px; 
+
+
+  position: fixed;
+  visibility: hidden;      /*사라지게*/
+  opacity: 0;
+  transition: all is;
+/*display: none;  /*보이지 않게, 나중에 모달창을 띄워야 하니까
+  */
+}
+
+
+
+.show {
+  visibility: visible;  /*다시 보이게 */
+  opacity: 1;
+  
+ /* display: block;*/
+/*자바 스크립트로 제어할거임, 탈부착! */
+}
+
+.white-bg {
+  width: 80%;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/*다크모드는 스크립트로 했지만 모달창은 css에 직접 제어할 수 있게 class를 활용해서! // 직접 커스텀*/
