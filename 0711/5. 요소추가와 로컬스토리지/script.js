@@ -45,7 +45,16 @@ for (let i=0; i<cart.length; i++) {
  //   console.log(e.target.previousElementSibling.previousElementSibling);         //이전, 요소, 형제관계 가져와라 // 클릭한 버튼의 형제 관계 p태그가 나옴 //기준은 e.target // 
   let nameTag = e.target.previousElementSibling.previousElementSibling;              //이름을 뽑아와야 하니까 이전 previous 한번 더 입력해줌
   let name = nameTag.innerHTML;                                                      //name이라는 변수에 넣어주고, 로컬에 넣어줘야 하는데, 값이 다달라서 배열로 // 또 JSON으로 변환해줌
+  
+  //로컬 스트리지에서 꺼내오는 작업이 필요함! 
   let temp = localStorage.getItem('cart');
+    // 장바구니에 넣으려는 과일이 로컬 스트리지에 있는지, 없는지 여부를 알려주는 변수
+  let isHave = false;
+   // 장바구니에 넣으려는 과일이 로컬스트리지에 있으면
+   // 몇번째 인덱스에 있는지 알려주는 변수 
+  let index;
+
+
 
   if(temp != null) {                                    // cart가 널이 아닐때 꺼내와라 
     //로컬 스토리지에 있으면 먼저 그 정보들을 꺼내와야 함
@@ -53,15 +62,32 @@ for (let i=0; i<cart.length; i++) {
 
     temp = JSON.parse(temp);
 
-    // 새로 장바구니에 담을 name을 추가
-    temp.push(name);
+  temp.forEach( ( data, i ) => {    //temp가 data에 대입되면서 반복됨. 향상 for문과 같음 
+      if ( data.name === name) {
+          isHave = true;
+          index = i;
+    }
+    });    
+      // 위 반복문에서 기존 로컬스토리지에 해당 과일이 있는지 없는지
+      // 검사를 끝냈으므로 여부에 따라 다르게 처리
+    
+    if(isHave) {
+        temp[index].cnt++;  
+      } else {
+        temp.push( { 'name' : name, 'cnt' : 1 });
+      }
+   
+
+  
     // 추가된 정보를 로컬스토리지에 다시 넣음 
     localStorage.setItem('cart', JSON.stringify( temp ));
 
   } else {
-
-    localStorage.setItem('cart',JSON.stringify( [name]));
-  }
+   // 해당 과일이 없을 때가 아니라, 로컬스티리지 자체가 비어 있을 경우에 실행될 코드  
+  localStorage.setItem('cart',  
+      JSON.stringify( [ {'name': name, 'cnt' : 1 } ] )
+    )
+  };
   
 })                             
 }
